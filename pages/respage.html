@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Reservation</title>
+    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="../styles/booking.css" />
+  </head>
+  <body>
+    <hr>
+    <div class="navbar-header">
+      <h3>FunJet Airlines Booking Page</h3>
+    </div>
+    <div>
+      <a href="../index.html">Home</a>
+    </div>
+    <div class="main-booking">
+      <div class="booking-container">
+        <form action=" https://httpbin.org/post" method="post">
+          <div class="outbound-city">
+            <label for="city">Outbound City:</label>
+            <select name="city" id="city">
+              <option value="salt lake city">Salt Lake City (SLC)</option>
+              <option value="denver">Denver (DEN)</option>
+              <option value="saint george">St George (SGU)</option>
+            </select>
+          </div>
+          
+          <div class="return-city">
+            <label for="city">Return City:</label>
+            <select name="city" id="city">
+              <option value="papeete">Papeete (PPT)</option>
+              <option value="cancun">Cancun (CUN)</option>
+              <option value="bora bora">Bora Bora (BOB)</option>
+            </select>
+          </div>
+          <hr>
+          <div class="travel-date">
+            <label for="start">Outbound Date</label>
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2022-10-01"
+              min="2022-10-01"
+              max="2023-10-01"
+            />
+            <label for="end">Return Date</label>
+            <input
+              type="date"
+              id="end"
+              name="trip-end"
+              value="2022-10-01"
+              min="2022-10-01"
+              max="2023-10-01"
+            />
+          </div>
+          <hr>
+          <div class="checkbox">
+            <span class="title">Show Trip:</span>
+            <input
+              type="checkbox"
+              name="flights"
+              id="flight-only"
+              value="flights-only"
+            />
+            <label for="flights-only">Flights Only</label>
+            <input
+              type="checkbox"
+              name="flights"
+              id="flight-hotel"
+              value="flights-hotels"
+            />
+            <label for="flights-hotels">Flights+Hotel</label>
+            <input
+              type="checkbox"
+              name="flights"
+              id="flight-hotel-car"
+              value="flights-hotels-cars"
+            />
+            <label for="flights-hotels-cars">Flights+Hotel+Car</label>
+            <input
+              type="checkbox"
+              name="flights"
+              id="flight-car"
+              value="flights-cars"
+            />
+            <label for="flights-cars">Flights+Car</label>
+            <hr>
+            <div class="passenger-info">Passenger Information:</div>
+            <div>
+              <label for="firstName" class="title">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required />
+              <label for="lastName" class="title">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div class="radio-buttons">
+              <span class="title">Gender:</span>
+              <input type="radio" name="gender" id="male" value="M" />
+              <label for="male">M</label>
+              <input type="radio" name="gender" id="female" value="F" />
+              <label for="female">F</label>
+            </div>
+            <div>
+              <label for="email" class="title">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="phone" class="title">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <input type="submit">
+        </form>
+        <div class="booking-wrapper"></div>
+      </div>
+    </div>
+     <!--Footer-->
+    <div class="footer-container">
+      
+      <p>
+        Proudly Powered by
+        <a href="https://www.devpipeline.com" target="_blank">DevPipeline</a>
+      </p>
+    </div>
+  </body>
+</html>
